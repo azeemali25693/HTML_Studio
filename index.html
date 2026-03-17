@@ -175,11 +175,11 @@
 <body class="text-slate-800 text-sm overflow-hidden">
 
     <!-- MOBILE BLOCKER OVERLAY (Shows only on mobile devices) -->
-    <div id="mobile-block" class="fixed inset-0 bg-slate-900 flex flex-col justify-center items-center text-center p-8 z-[9999]">
+    <div id="mobile-block" class="fixed inset-0 bg-white flex flex-col justify-center items-center text-center p-8 z-[9999]">
         <i class="fas fa-desktop text-6xl text-[#0082ca] mb-6"></i>
-        <h2 class="text-3xl font-bold text-white mb-4">Desktop Only</h2>
-        <p class="text-slate-300 text-lg max-w-md leading-relaxed">
-            Ye app sirf desktop ke liye banayi gayi hai. Kripya isay computer ya laptop par open karein. Mobile par ye website available nahi hai!
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Desktop Only</h2>
+        <p class="text-slate-600 text-lg max-w-md leading-relaxed">
+           This app is for desktop only. Please open it on a computer or laptop.
         </p>
     </div>
 
@@ -429,8 +429,7 @@
                     setInitialActiveTab();
                 } catch (error) {
                      logError(`Monaco init failed: ${error.message}`);
-                     editorContainer.innerHTML = `<div class="p-5 text-red-600">Editor load fail.</div>`;
-                     [clearBtn,copyCodeBtn,pasteCodeBtn,exportBtn].forEach(b => b && (b.disabled=true));
+                     editorContainer.innerHTML = `<div class="p-5 text-red-600">Editor load fail.</div>`;[clearBtn,copyCodeBtn,pasteCodeBtn,exportBtn].forEach(b => b && (b.disabled=true));
                 }
             });
 
