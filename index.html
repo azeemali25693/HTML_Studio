@@ -57,7 +57,8 @@
             width: 220px;
             background-color: var(--header-bg-color); 
             border-right: 1px solid var(--border-color);
-            padding: 35px 10px 15px 10px; /* Kept top padding increased to move buttons down */
+            /* Padding top reduced to move buttons upwards */
+            padding: 15px 10px; 
         }
 
         .sidebar button {
@@ -212,6 +213,12 @@
                 <button id="clearBtn"><i class="fas fa-eraser"></i><span>Clear Editor</span></button>
                 <button id="copyCodeBtn"><i class="fas fa-copy"></i><span>Copy Code</span></button>
                 <button id="pasteCodeBtn"><i class="fas fa-paste"></i><span>Paste Code</span></button>
+                
+                <!-- Horizontal Separator -->
+                <hr style="border-top: 1px solid var(--sidebar-button-border-color); margin: 15px 5px;">
+                
+                <!-- Moved Download Button to Sidebar -->
+                <button id="exportBtn"><i class="fas fa-download"></i><span>Download Code</span></button>
             </div>
 
             <!-- Content Area (Editor/Preview) -->
@@ -237,16 +244,6 @@
                                 Browser View
                             </button>
                         </div>
-                    </div>
-                    
-                    <!-- NEW Download Button with custom SVG (Top Right Corner) -->
-                    <div class="flex-shrink-0 ml-3 pb-1.5">
-                        <button id="exportBtn" class="w-9 h-9 rounded-full bg-[#0082ca] hover:bg-[#006ba6] text-white flex items-center justify-center transition-transform hover:scale-105 shadow-md focus:outline-none focus:ring-2 focus:ring-[#0082ca] focus:ring-offset-2" title="Download Code">
-                            <!-- New, clearer and thicker SVG icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                            </svg>
-                        </button>
                     </div>
                 </div>
 
